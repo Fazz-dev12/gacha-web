@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha Simulator Anti Kikir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card section">
+            <input type="number" id="inputSaldo" placeholder="Masukkan Saldo DM...">
+            <button onclick="pasangSaldo()">PASANG SALDO</button>
+            <h2 id="saldoDisplay">Saldo Saat Ini: 0 DM</h2>
+        </div>
+
+        <div class="card section main-display">
+            <div id="displayBox">
+                Siap untuk gacha?<br>
+                <span class="pity-info">Pity: 0 / 50</span>
+            </div>
+            
+            <div class="input-harga">
+                <label>Harga 1x:</label>
+                <input type="number" id="harga1x" value="50">
+                <label>Harga 10x:</label>
+                <input type="number" id="harga10x" value="450">
+            </div>
+
+            <div class="tombol-area">
+                <button onclick="gachaCustom(1)">Gacha 1x</button>
+                <button onclick="gachaCustom(10)">Gacha 10x</button>
+            </div>
+        </div>
+
+        <div class="card section">
+            <h3>Koleksi Pemain:</h3>
+            <div id="inventoryList" class="inventory-grid"></div>
+        </div>
+
+        <div class="card section">
+            <h3>Riwayat Loot:</h3>
+            <button class="btn-clear" onclick="hapusRiwayat()">Hapus Riwayat</button>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
